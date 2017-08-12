@@ -5,9 +5,9 @@ date:   2017-08-12 22:24:49 +0300
 categories: fedora pytorch
 comments: true
 ---
-One way of installing pytorch on Fedora 26 for Cuda 8.0 is to do the following:
+It is not trivial to compile pytorch on Fedora 26 as the gcc compiler 7.1.1 is not compatible with Cuda 8.0. This note describes a way around this problem.
 
-1. Compile from source an old gcc version. I used the latest version in the 5 series, 5.4.0 . The compiler source may be downloaded from: https://ftp.gnu.org/gnu/gcc/gcc-5.4.0/ . Note that this is quite a time consuming compilation.
+1. Compile from source an old gcc version that is compatible with cuda.. I used the latest version in the 5 series, 5.4.0 . The compiler source may be downloaded from: [https://ftp.gnu.org/gnu/gcc/gcc-5.4.0/](https://ftp.gnu.org/gnu/gcc/gcc-5.4.0/) . Note that this is quite a time consuming compilation.
 
 2. Compile pytorch with the following command line:
 

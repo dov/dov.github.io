@@ -21,24 +21,24 @@ It is not trivial to compile pytorch on Fedora 26 as the gcc compiler 7.1.1 is n
                       /usr/local/lib64/python2.7/site-packages:
     {% endhighlight %}
 4. Test that everything works:
-    {% highlight bash %}
-    ipython2
-    ... import torch
-    ... torch.version.__version__
-    {% endhighlight %}
+        {% highlight bash %}
+        ipython2
+        ... import torch
+        ... torch.version.__version__
+        {% endhighlight %}
 5. To install `pytorch-vision` apply the following path, whereupon `pytorch-vision` may be installed with a simple `python setup.py install`.
-    {% highlight patch %}
-    diff --git a/setup.py b/setup.py
-    index a83d889..d2a16bc 100644
-    --- a/setup.py
-    +++ b/setup.py
-    @@ -13,7 +13,6 @@ requirements = [
-         'numpy',
-         'pillow',
-         'six',
-    -    'torch',
-     ]
-    {% endhighlight %}
+        {% highlight patch %}
+        diff --git a/setup.py b/setup.py
+        index a83d889..d2a16bc 100644
+        --- a/setup.py
+        +++ b/setup.py
+        @@ -13,7 +13,6 @@ requirements = [
+             'numpy',
+             'pillow',
+             'six',
+        -    'torch',
+         ]
+        {% endhighlight %}
 
 {% if page.comments %}
 <div id="disqus_thread"></div>

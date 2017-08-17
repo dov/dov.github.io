@@ -56,9 +56,28 @@ for idx,row in df.iterrows():
 print 'Third:  ', time.time()-t0
 {% endhighlight %}
 
-This took 0.0028s . 
+This took 0.00344s . 
 
-I.e. just by rewriting the assignments, I got a 55 times speedup!
+I.e. just by rewriting the assignments, I got a 45 times speedup!
+
+# Continuation 2017-08-17 Thu
+
+After writing the above lines did I learn that `set_value()` will be deprecated. But there is another accessor `at` that is almost as fast:
+
+{% highlight python %}
+t0 = time.time()
+for idx,row in df.iterrows():
+  df.at[idx,'A'] = 100+idx
+  df.at[idx,'B'] = 200+idx
+  df.at[idx,'C'] = 300+idx
+print 'Forth:  ', time.time()-t0
+{% endhighlight %}
+
+This took 0.0044s , about 25% slower, but apparently this constract is "more" correct.
+
+# References
+
+- [https://github.com/pandas-dev/pandas/issues/15269#issuecomment-322571210](https://github.com/pandas-dev/pandas/issues/15269#issuecomment-322571210)
 
 {% if page.comments %}
 <div id="disqus_thread"></div>

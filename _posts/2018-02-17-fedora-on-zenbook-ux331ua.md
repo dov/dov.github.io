@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Fedora 27 on Asus Zeenbook UX331UA"
-date:   2017-08-12 22:24:49 +0300
-categories: fedora pytorch
+date:   2018-02-17 Sat 22:00:00 +0200
+categories: fedora asus
 comments: true
 ---
 I recently bought a Zeenbook UX331UA for running a dual boot Windows 10 and Fedora 27. This blog post will describe how I setup the Fedora system and my impression with it. (Spoiler: It's awesome!)

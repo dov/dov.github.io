@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Can't use Vulkan on GTX 1070"
+title:  Can't use Vulkan on GTX 1070
 date:   Fri 17 May 2019 04:35:58 PM IDT
 categories: NVIDIA vulkan
 comments: true

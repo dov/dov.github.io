@@ -8,4 +8,7 @@ comments: true
 
 This post should describe how to use the G5X as a webcamera.
 
-A small comment
+TBD
+
+(Let me know if you are inerested)
+
